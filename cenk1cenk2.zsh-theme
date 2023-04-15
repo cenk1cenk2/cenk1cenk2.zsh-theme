@@ -37,7 +37,7 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[red]%}x"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%}) %{$fg[green]%}+"
 
-local ZSH_PROMPT_HEAD='%{$FG[239]%}[$(get_host_name)%{$FG[239]%}>$(get_user_name)%{$FG[239]%}] %{$FG[239]%}|%{$reset_color%} $(current_dir)'
+local ZSH_PROMPT_HEAD='%{$fg[239]%}[$(get_host_name)%{$fg[239]%}>$(get_user_name)%{$fg[239]%}] %{$fg[239]%}|%{$reset_color%} $(current_dir)'
 local ZSH_PROMPT_HEAD_RIGHT='$(align_right " `git_prompt_info`")'
 
 local ZSH_PROMPT_FOOT=''
