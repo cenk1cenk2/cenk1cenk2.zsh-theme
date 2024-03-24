@@ -24,6 +24,6 @@ current_dir() {
 	echo "${cyan}%~${reset}"
 }
 
-PROMPT="%B$(get_hostname}${white}>${reset}$(get_username) ${white}|${reset} $(current_dir)%b
-%(?:${green}$:${red}$)${reset} ${reset}"
+PROMPT="%B$(get_hostname)${white}>${reset}$(get_username) ${white}|${reset} $(current_dir)%b"
+PROMPT+="%(?:${green}$:${red}$)${reset} ${reset}"
 RPROMPT=""
