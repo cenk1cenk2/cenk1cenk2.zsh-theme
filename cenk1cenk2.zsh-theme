@@ -1,11 +1,11 @@
 # vim: ft=zsh
 # shellcheck shell=zsh
 
-local green='%F{green%}'
-local red='%F{red%}'
-local cyan='%F{cyan%}'
-local yellow='%F{yellow%}'
-local white='%F{white%}'
+local green='%F{green}%'
+local red='%F{red}%'
+local cyan='%F{cyan}%'
+local yellow='%F{yellow}%'
+local white='%F{white}%'
 local reset='%f'
 
 local hostname='${red}%m${reset}'
@@ -18,5 +18,5 @@ local dir='${cyan}%~${reset}'
 
 setopt PROMPT_SUBST
 PROMPT='%B${hostname}${white}>${reset}${username} ${white}|${reset} ${dir}%b
-%(?:${green}$:${red}$)${reset} ${reset}'
+%(?:${green}$:${red}$)${reset} '
 RPROMPT=''
