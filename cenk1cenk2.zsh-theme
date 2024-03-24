@@ -1,11 +1,11 @@
 # vim: ft=zsh
 # shellcheck shell=zsh
 
-local green="%{$fg[green]%}"
-local red="%{$fg[red]%}"
-local cyan="%{$fg[cyan]%}"
-local yellow="%{$fg[yellow]%}"
-local white="%{$fg[white]%}"
+local green="%{$fg_bold[green]%}"
+local red="%{$fg_bold[red]%}"
+local cyan="%{$fg_bold[cyan]%}"
+local yellow="%{$fg_bold[yellow]%}"
+local white="%{$fg_bold[white]%}"
 local reset="%{$reset_color%}"
 
 local username_color="${green}"
