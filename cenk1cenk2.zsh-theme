@@ -1,29 +1,21 @@
 # vim: ft=zsh
 # shellcheck shell=zsh
 
-local green="%{$F{green}%}"
-local red="%{$F{red}%}"
-local cyan="%{$F{cyan}%}"
-local yellow="%{$F{yellow}%}"
-local white="%{$F{white}%}"
-local reset="%{$reset_color%}"
+local green="%{F{green}%}"
+local red="%{F{red}%}"
+local cyan="%{F{cyan}%}"
+local yellow="%{F{yellow}%}"
+local white="%{F{white}%}"
+local reset="%f"
 
-get_hostname() {
-	echo "${red}%m${reset}"
-}
+local hostname="${red}%m${reset}"
+local username_color="${green}"
+if [[ $USER == 'root' || $UID == 0 ]]; then
+	username_color="${yellow}"
+fi
+local username="${username_color}%n${reset}"
+local dir="${cyan}%~${reset}"
 
-get_username() {
-	local color="${green}"
-	if [[ $USER == 'root' || $UID == 0 ]]; then
-		color="${yellow}"
-	fi
-	echo "${color}%n${reset}"
-}
-
-current_dir() {
-	echo "${cyan}%~${reset}"
-}
-
-PROMPT="%B$(get_hostname)${white}>${reset}$(get_username) ${white}|${reset} $(current_dir)%b"
-PROMPT+="%(?:${green}$:${red}$)${reset} ${reset}"
+PROMPT="%B${hostname}${white}>${reset}${username} ${white}|${reset} ${dir}%b
+%(?:${green}$:${red}$)${reset} ${reset}"
 RPROMPT=""
