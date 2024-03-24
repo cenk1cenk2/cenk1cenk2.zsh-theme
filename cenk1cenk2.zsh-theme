@@ -13,9 +13,10 @@ if [[ $USER == 'root' || $UID == 0 ]]; then
 	username_color="${yellow}"
 fi
 
-local hostname="${red}${HOST}${reset}"
+local hostname="${red}%m${reset}"
 local username="${username_color}%n${reset}"
 local pwd="${cyan}%c${reset}"
 
 PROMPT="%B${hostname}${white}>${reset}${username} ${white}|${reset} ${pwd}%b
 %(?:${green}$:${red}$)${reset} ${reset}"
+RPROMPT=""
