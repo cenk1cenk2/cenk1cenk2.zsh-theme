@@ -15,9 +15,8 @@ if [[ $USER == 'root' || $UID == 0 ]]; then
 fi
 local username="${username_color}%n${reset}"
 local dir="${cyan}%~${reset}"
-local status="%(?:${green}$:${red}$)${reset}"
 
 setopt PROMPT_SUBST
 PROMPT="%B${hostname}${white}>${reset}${username} ${white}|${reset} ${dir}%b
-${status} "
+%(?:${green}$:${red}$)${reset} "
 RPROMPT=''
