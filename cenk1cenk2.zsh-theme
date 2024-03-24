@@ -17,6 +17,6 @@ local username='${username_color}%n${reset}'
 local dir='${cyan}%~${reset}'
 
 setopt PROMPT_SUBST
-PROMPT='%B${hostname}${white}>${reset}${username} ${white}|${reset} ${dir}%b
-%(?:${green}$:${red}$)${reset} '
+PROMPT="%B${hostname}${white}>${reset}${username} ${white}|${reset} ${dir}%b
+%(?:${green}$:${red}$)${reset} "
 RPROMPT=''
