@@ -1,13 +1,13 @@
 # vim: ft=zsh
 # shellcheck shell=zsh
-local username_color="%{$fg[green]%}"
+local username_color="%{$F{green}%}"
 if [[ $USER == 'root' || $UID == 0 ]]; then
-	username_color="%{$fg[yellow]%}"
+	username_color="%{$F{yellow}%}"
 fi
 
-local hostname="%{$fg[red]%}${HOST}%{$reset_color%}"
+local hostname="%{$F{red}%}${HOST}%{$reset_color%}"
 local username="${username_color}%n%{$reset_color%}"
-local pwd="%{$fg[cyan]%}%c%{$reset_color%}"
+local pwd="%{$F{cyan}%}%c%{$reset_color%}"
 
-PROMPT='%B${hostname}%{$FG[239]%}>${username} %{$FG[239]%}|%{$reset_color%} ${pwd}%b
-%(?:%{$fg[green]%}$:%{$fg[red]%}$)%{$reset_color%} %{$reset_color%}'
+PROMPT='%B${hostname}%{F{white}%}>${username} %{$F{white}%}|%{$reset_color%} ${pwd}%b
+%(?:%{$F{green}%}$:%{$F{red}%}$)%{$reset_color%} %{$reset_color%}'
